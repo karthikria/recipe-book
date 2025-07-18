@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>RECIPE BOOK</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>RECIPE BOOK</h1>
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Enter the ingredient" />
+      <button id="search-btn">Search</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="add-recipe">
+      <h2>Add New Recipe</h2>
+      <form id="add-recipe-form">
+        <input type="text" id="new-name" placeholder="Recipe Name" required />
+        <input type="text" id="new-ingredients" placeholder="Ingredients (comma separated)" required />
+        <textarea id="new-steps" placeholder="Preparation steps" required></textarea>
+        <input type="text" id="new-image" placeholder="Image URL" required />
+        <button type="submit">Add Recipe</button>
+      </form>
+    </section>
+
+    <div class="meal-list" id="meal-list"></div>
+  </main>
+
+  <div class="modal" id="recipe-modal" style="display: none;">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h3 id="modal-title"></h3>
+      <p><strong>Ingredients:</strong></p>
+      <p id="modal-ingredients"></p>
+      <p><strong>Steps:</strong></p>
+      <p id="modal-steps"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
